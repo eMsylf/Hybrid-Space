@@ -10,6 +10,7 @@ public class WebcamTest : MonoBehaviour {
 		for( int i = 0 ; i < devices.Length ; i++ )
    			Debug.Log(devices[i].name);
 
+		// for now, use the first camera available
 		WebCamTexture webcam = new WebCamTexture(devices[0].name);
 		GetComponent<MeshRenderer>().material.mainTexture = webcam;
 		webcam.Play();
