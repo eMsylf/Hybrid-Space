@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using Vuforia;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovementSimpleVersion : MonoBehaviour {
 
 	public float speed;
 	public bool active;
@@ -27,19 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void EnableMovement()
 	{
-		GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
-		foreach(GameObject platform in platforms)
-		{
-			Vector3 pos = platform.transform.position;
-			pos.z = 20;
-			Instantiate(platformPrefab, pos, Quaternion.identity);
-			Destroy(platform);
-		}
-		
-		
-		TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-		//active = true;
-		//rb.AddForce(Vector3.left * speed);
+		active = true;
+		rb.AddForce(Vector3.left * speed);
 	}
 	
 }
