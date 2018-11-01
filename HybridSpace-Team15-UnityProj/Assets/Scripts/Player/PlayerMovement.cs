@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (active)
 		{
 			rb.AddForce(Vector3.left * speed);
-			Debug.Log("Should move");
 		}
 	}
 
