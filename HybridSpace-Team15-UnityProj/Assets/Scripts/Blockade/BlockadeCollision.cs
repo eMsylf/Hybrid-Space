@@ -9,6 +9,7 @@ public class BlockadeCollision : MonoBehaviour {
 		if (c.tag == "Platform")
 		{
 			// SHOW HUD
+			Debug.Log("NOT ALLOWED");
 		}
 	}
 }

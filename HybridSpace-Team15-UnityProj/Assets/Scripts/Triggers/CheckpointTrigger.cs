@@ -5,18 +5,20 @@ using UnityEngine;
 public class CheckpointTrigger : MonoBehaviour {
 
 	public Camera cam;
-	public Vector3 newCameraPosition;
 
-	void OnTriggerEnter(Collider collider)
+	void OnCollisionEnter(Collision collider)
 	{
 		if (collider.gameObject.name == "Player")
 		{
+			GameManager.instance.NextCheckpoint();
+			collider.gameObject.GetComponent<SendMessage>().StopMoving();
 			TransformCamera();
+			GameManager.instance.ResetLevel();
 		}
 	}
 
 	void TransformCamera()
 	{
-		cam.transform.position = newCameraPosition;
+		cam.transform.position = GameManager.instance.activeCheckpoint.cameraPosition;
 	}
 }
