@@ -5,11 +5,18 @@ using UnityEngine;
 public class CheckpointTrigger : MonoBehaviour {
 
 	public Camera cam;
+	public int checkpointID;
 
 	void OnCollisionEnter(Collision collider)
 	{
 		if (collider.gameObject.name == "Player")
 		{
+			// colliding with current checkpoint --> do nothing
+			if (GameManager.instance.activeCheckpoint.id == checkpointID)
+			{
+				return;
+			}
+
 			GameManager.instance.NextCheckpoint();
 			collider.gameObject.GetComponent<SendMessage>().StopMoving();
 			TransformCamera();

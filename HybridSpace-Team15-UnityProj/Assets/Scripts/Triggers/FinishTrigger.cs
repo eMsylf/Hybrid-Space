@@ -10,7 +10,7 @@ public class FinishTrigger : MonoBehaviour {
 		if (collider.name != "Player") return;
 
 		finishText.SetActive(true);
-		collider.transform.GetComponent<PlayerMovement>().active = false;
+		collider.transform.GetComponent<PlayerMovement>().activeSimulation = false;
 		collider.transform.GetComponent<Rigidbody>().AddForce(new Vector3(-3, 0, 0), ForceMode.Impulse); // add force for natural look
 	}
 }

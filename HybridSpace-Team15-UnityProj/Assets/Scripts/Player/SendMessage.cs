@@ -6,6 +6,6 @@ public class SendMessage : MonoBehaviour {
 
 	public void StopMoving()
 	{
-		GetComponent<PlayerMovement>().active = false;
+		GetComponent<PlayerMovement>().activeSimulation = false;
 	}
 }

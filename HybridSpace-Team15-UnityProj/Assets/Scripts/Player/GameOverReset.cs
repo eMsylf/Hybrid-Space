@@ -19,7 +19,7 @@ public class GameOverReset : MonoBehaviour {
 	void ResetLevel()
 	{
 		// reset player
-		GetComponent<PlayerMovement>().active = false;
+		GetComponent<PlayerMovement>().activeSimulation = false;
 		transform.position = GameManager.instance.activeCheckpoint.playerPosition;
 
 		GameManager.instance.ResetLevel();
