@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CheckpointTrigger : MonoBehaviour
 {
-
-  public Camera cam;
   public int checkpointID;
 
   void OnCollisionEnter(Collision collider)
@@ -13,20 +11,12 @@ public class CheckpointTrigger : MonoBehaviour
     if (collider.gameObject.name == "PlayerControlled" || collider.gameObject.name == "PlayerSimulated")
     {
       // colliding with current checkpoint --> do nothing
-      if (GameManager.instance.activeCheckpoint.id == checkpointID)
+      if (GameManager.instance.ActiveCheckpoint.id == checkpointID)
       {
         return;
       }
 
       GameManager.instance.NextCheckpoint();
-      collider.gameObject.GetComponent<SendMessage>().StopMoving();
-      TransformCamera();
-      GameManager.instance.ResetLevel();
     }
-  }
-
-  void TransformCamera()
-  {
-    cam.transform.position = GameManager.instance.activeCheckpoint.cameraPosition;
   }
 }

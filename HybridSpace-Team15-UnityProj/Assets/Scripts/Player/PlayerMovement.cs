@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using Vuforia;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -80,3 +80,4 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 }
+*/

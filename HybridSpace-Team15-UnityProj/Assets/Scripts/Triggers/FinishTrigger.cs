@@ -8,18 +8,8 @@ public class FinishTrigger : MonoBehaviour
 
   void OnTriggerEnter(Collider collider)
   {
-    if (collider.name == "PlayerSimulated")
-    {
-      finishText.SetActive(true);
-      collider.transform.GetComponent<PlayerMovementSimulated>().activeSimulation = false;
-      collider.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
-    }
-    if (collider.name == "PlayerControlled")
-    {
-      finishText.SetActive(true);
-      collider.transform.GetComponent<PlayerMovementControl>().activeSimulation = false;
-      collider.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
-    }
-
+    finishText.SetActive(true);
+    collider.transform.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
+    collider.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
   }
 }

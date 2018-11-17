@@ -5,14 +5,13 @@ using Vuforia;
 public class PlayerMovementSimulated : MonoBehaviour
 {
   public float speed;
-  public bool activeSimulation;
   public float jumpSpeed;
   public float gravitySpeed;
-  public float jumpForceMultiplier; // multiplier of jump force when on green jump platform
 
   private Rigidbody rb;
   private int jumpCounter;
   private GameObject touchingPlatform;
+  private bool activeSimulation;
 
   // Use this for initialization
   void Start()
@@ -50,11 +49,9 @@ public class PlayerMovementSimulated : MonoBehaviour
     jumpCounter = 0;
   }
 
-  public void EnableMovement()
+  public void EnableMovement(bool b)
   {
-    GameManager.instance.SpawnPlatforms();
-
-    activeSimulation = true;
+    activeSimulation = b;
   }
 
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using Vuforia;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -62,8 +62,9 @@ public class PlayerMovementControl : MonoBehaviour
   public void EnableMovement()
   {
     // put platforms in the right place
-    GameManager.instance.SpawnPlatforms();
-    activeSimulation = true;
+    //GameManager.instance.SpawnPlatforms();
+    //activeSimulation = true;
   }
 
 }
+*/
