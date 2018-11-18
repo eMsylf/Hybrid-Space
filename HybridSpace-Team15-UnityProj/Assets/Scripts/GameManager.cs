@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Vuforia;
 
 [System.Serializable]
@@ -39,11 +40,20 @@ public class GameManager : MonoBehaviour
   // called when player presses "simulate"
   public void StartSimulation()
   {
-    // enable player movement
-    player.GetComponent<PlayerMovementSimulated>().EnableMovement(true);
-
-    // set platforms
     SpawnPlatforms();
+
+    bool blockadeCollision = CollidingWithBlockade();
+    Debug.Log("Blockade collision: " + blockadeCollision);
+
+    if (!blockadeCollision)
+    {
+      player.GetComponent<PlayerMovementSimulated>().EnableMovement(true);
+      TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+    }
+    else
+    {
+      ResetLevel();
+    }
   }
 
   // called when player dies
@@ -105,8 +115,22 @@ public class GameManager : MonoBehaviour
 
       platform.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
     }
+  }
 
-    TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+  private bool CollidingWithBlockade()
+  {
+    GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
+    GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
+    foreach (GameObject blockade in blockades)
+    {
+      //Debug.Log("There is a blockade, its name is: " + blockade.name);
+      //Debug.Log("Its collision value is: " + blockade.GetComponent<BlockadeCollision>().IsColliding());
+      if (blockade.GetComponent<BlockadeCollision>().IsColliding(platforms))
+      {
+        return true;
+      }
+    }
+    return false;
   }
 
   private void SetScaleAndPosition(ref GameObject obj)

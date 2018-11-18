@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockadeCollision : MonoBehaviour {
+public class BlockadeCollision : MonoBehaviour
+{
+  private Collider coll;
 
-	void OnTriggerEnter(Collider c)
-	{
-		if (c.tag == "Platform")
-		{
-			// SHOW HUD
-			Debug.Log("NOT ALLOWED");
-		}
-	}
+  void Start()
+  {
+    coll = GetComponent<Collider>();
+  }
+
+  public bool IsColliding(GameObject[] platforms)
+  {
+    foreach (GameObject platform in platforms)
+    {
+      if (coll.bounds.Intersects(platform.GetComponent<Collider>().bounds)) return true;
+    }
+    return false;
+  }
 }
