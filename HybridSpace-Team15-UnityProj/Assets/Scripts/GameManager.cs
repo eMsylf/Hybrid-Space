@@ -24,14 +24,20 @@ public class GameManager : MonoBehaviour
 
   public Checkpoint ActiveCheckpoint { get { return activeCheckpoint; } }
 
-  // Use this for initialization
-  void Start()
+  //  Vector3 startPoint; I tried something, didn't quite work, only errors popped up
+
+    // Use this for initialization
+    void Start()
   {
     if (instance == null)
       instance = this;
 
     else if (instance != this)
       Destroy(gameObject);
+
+        //startPoint = GetComponent<StartPoint>().gameObject.transform.position;
+
+        //checkpoints[0].playerPosition = startPoint;
 
     activeCheckpoint = checkpoints[0];
     player = GameObject.FindGameObjectWithTag("Player");
