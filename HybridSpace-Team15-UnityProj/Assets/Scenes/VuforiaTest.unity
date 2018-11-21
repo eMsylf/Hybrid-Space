@@ -869,48 +869,6 @@ Transform:
   m_Father: {fileID: 1236174675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &495596309
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 8.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 13.29431
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &501577890
 Prefab:
   m_ObjectHideFlags: 0
@@ -1233,6 +1191,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!1001 &872698277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977615296097806, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243164930773398, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977615296097806, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243164930773398, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!21 &903850403
 Material:
   serializedVersion: 6
@@ -1408,11 +1424,9 @@ MonoBehaviour:
   jumpPlatform: {fileID: 1598197295369388, guid: 111763cf656614b31ae5e3f35a70bfd9,
     type: 2}
   checkpoints:
-  - id: 0
-    playerPosition: {x: 6.5, y: 1.6, z: 19}
+  - playerPosition: {x: 6.5, y: 1.6, z: 19}
     cameraPosition: {x: 0, y: 0, z: 0}
-  - id: 1
-    playerPosition: {x: -6.1, y: -1, z: 19}
+  - playerPosition: {x: -6.1, y: -1, z: 19}
     cameraPosition: {x: -12.5, y: 0, z: 0}
 --- !u!4 &932192401
 Transform:
@@ -1801,7 +1815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1586451430
 Transform:
   m_ObjectHideFlags: 0
@@ -2043,7 +2057,6 @@ MonoBehaviour:
   mPreserveChildSize: 1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/HybridSpace_BuildingGame.xml
-  mExtendedTracking: 0
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -2062,22 +2075,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1739490895 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1181306556881896, guid: 1b9f5036ea33b364fbcdb033336e0f49,
-    type: 2}
-  m_PrefabInternal: {fileID: 495596309}
---- !u!114 &1739490897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1739490895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50999c2ff60e4642b5f40bd4113e034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1760218712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,7 +2174,6 @@ MonoBehaviour:
   mPreserveChildSize: 1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/HybridSpace_BuildingGame.xml
-  mExtendedTracking: 0
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1

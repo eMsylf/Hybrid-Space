@@ -11,7 +11,7 @@ public class CheckpointTrigger : MonoBehaviour
     if (collider.gameObject.name == "PlayerControlled" || collider.gameObject.name == "PlayerSimulated")
     {
       // colliding with current checkpoint --> do nothing
-      if (GameManager.instance.ActiveCheckpoint.id == checkpointID)
+      if (GameManager.instance.ActiveCheckpointIndex == checkpointID)
       {
         return;
       }
