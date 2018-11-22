@@ -1200,11 +1200,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.57
+      value: 5.72
       objectReference: {fileID: 0}
     - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.89
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 4817670303522058, guid: 1b9f5036ea33b364fbcdb033336e0f49, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 910049319}
   - component: {fileID: 910049318}
   - component: {fileID: 910049323}
+  - component: {fileID: 910049324}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: Untagged
@@ -1337,7 +1338,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.2487627, g: 0.19842473, b: 0.46226418, a: 1}
-  m_projectionMatrixMode: 2
+  m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 42.240005
@@ -1391,6 +1392,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4971947078794b8badc07af7601ccac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &910049324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910049317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9012f17edb343eaba58342e91f44e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipHorizontal: 1
 --- !u!1 &932192399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,9 +1437,7 @@ MonoBehaviour:
   jumpPlatform: {fileID: 1598197295369388, guid: 111763cf656614b31ae5e3f35a70bfd9,
     type: 2}
   checkpoints:
-  - playerPosition: {x: 6.5, y: 1.6, z: 19}
-    cameraPosition: {x: 0, y: 0, z: 0}
-  - playerPosition: {x: -6.1, y: -1, z: 19}
+  - playerPosition: {x: -6.1, y: 1, z: 19}
     cameraPosition: {x: -12.5, y: 0, z: 0}
 --- !u!4 &932192401
 Transform:
