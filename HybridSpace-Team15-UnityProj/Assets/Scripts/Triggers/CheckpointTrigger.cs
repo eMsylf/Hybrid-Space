@@ -8,7 +8,7 @@ public class CheckpointTrigger : MonoBehaviour
 
   void OnCollisionEnter(Collision collider)
   {
-    if (collider.gameObject.name == "PlayerControlled" || collider.gameObject.name == "PlayerSimulated")
+    if (collider.gameObject.tag == "Player")
     {
       // colliding with current checkpoint --> do nothing
       if (GameManager.instance.ActiveCheckpointIndex == checkpointID)

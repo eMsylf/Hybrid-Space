@@ -9,7 +9,6 @@ public class PlayerMovementSimulated : MonoBehaviour
   public float gravitySpeed;
 
   private Rigidbody rb;
-  private int jumpCounter;
   private GameObject touchingPlatform;
   private bool activeSimulation;
 
@@ -17,7 +16,6 @@ public class PlayerMovementSimulated : MonoBehaviour
   void Start()
   {
     rb = GetComponent<Rigidbody>();
-    jumpCounter = 0;
   }
 
   void Update()
@@ -34,12 +32,16 @@ public class PlayerMovementSimulated : MonoBehaviour
 
     }
 
+    if (touchingPlatform == null)
+    {
+      Debug.Log("Not on any platform");
+    }
+
     // add gravity
     rb.AddForce(Vector3.down * gravitySpeed);
-
   }
 
-  void OnCollisionEnter(Collision c)
+  void OnCollisionStay(Collision c)
   {
     if (c.contacts.Length > 0)
     {
@@ -53,14 +55,17 @@ public class PlayerMovementSimulated : MonoBehaviour
       {
         touchingPlatform = null;
       }
-      Debug.Log("Collision detected, normal: " + contact.normal);
     }
   }
 
   void OnCollisionExit(Collision collision)
   {
+    // if collision with checkpoint trigger, don't reset touching platform (causes 
+    //  player to be immovable)
+    if (collision.gameObject.GetComponent<CheckpointTrigger>() != null) return;
+
+    Debug.Log("Exit from: " + collision.gameObject.name);
     touchingPlatform = null;
-    jumpCounter = 0;
   }
 
   public void EnableMovement(bool b)
