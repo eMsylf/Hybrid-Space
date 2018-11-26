@@ -6,7 +6,7 @@ public class CheckpointTrigger : MonoBehaviour
 {
   public int checkpointID;
 
-  void OnCollisionEnter(Collision collider)
+  void OnTriggerEnter(Collider collider)
   {
     if (collider.gameObject.tag == "Player")
     {

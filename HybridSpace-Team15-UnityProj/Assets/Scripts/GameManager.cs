@@ -33,10 +33,13 @@ public class GameManager : MonoBehaviour
     else if (instance != this)
       Destroy(gameObject);
 
+
+    player = GameObject.FindGameObjectWithTag("Player");
+
     // include startpoint
     Checkpoint[] newCheckpoints = new Checkpoint[checkpoints.Length + 1];
     Checkpoint startPoint;
-    startPoint.playerPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
+    startPoint.playerPosition = player.GetComponent<Transform>().position;
     startPoint.cameraPosition = Camera.main.transform.position;
     newCheckpoints[0] = startPoint;
     for (int i = 1; i < newCheckpoints.Length; i++)
@@ -45,8 +48,6 @@ public class GameManager : MonoBehaviour
     }
 
     checkpoints = newCheckpoints;
-
-    player = GameObject.FindGameObjectWithTag("Player");
   }
 
   // called when player presses "simulate"
@@ -103,7 +104,7 @@ public class GameManager : MonoBehaviour
     foreach (GameObject platform in platforms)
     {
       // only get rendered platforms
-      if (!platform.transform.GetChild(0).GetComponent<MeshRenderer>().enabled) continue;
+      if (!platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled) continue;
 
       Vector3 pos = platform.transform.position;
       Quaternion rot = platform.transform.rotation;
@@ -125,7 +126,7 @@ public class GameManager : MonoBehaviour
       GameObject platform_instance = (GameObject)Instantiate(platformPrefab, pos, rot);
       SetScaleAndPosition(ref platform_instance);
 
-      platform.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+      platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
     }
   }
 
@@ -160,7 +161,7 @@ public class GameManager : MonoBehaviour
     Vector3 worldPos = cam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 19));
 
     obj.transform.position = worldPos;
-    obj.transform.localScale = Vector3.one * newSize;
+    obj.transform.localScale = Vector3.one * newSize * obj.transform.localScale.x;
     obj.transform.rotation = Quaternion.identity;
   }
 }
