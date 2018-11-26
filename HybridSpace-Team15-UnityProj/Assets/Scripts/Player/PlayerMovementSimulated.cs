@@ -11,11 +11,18 @@ public class PlayerMovementSimulated : MonoBehaviour
   private Rigidbody rb;
   private GameObject touchingPlatform;
   private bool activeSimulation;
+  private Animator animator;
+  private string walkingAnimation;
+  private string idleAnimation;
 
   // Use this for initialization
   void Start()
   {
     rb = GetComponent<Rigidbody>();
+    animator = GetComponent<Animator>();
+
+    walkingAnimation = "BounceAnimation";
+    idleAnimation = "Idle";
   }
 
   void Update()
@@ -28,12 +35,14 @@ public class PlayerMovementSimulated : MonoBehaviour
       if (activeSimulation)
       {
         rb.AddForce(Vector3.left * speed);
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(walkingAnimation)) animator.Play(walkingAnimation);
       }
 
     }
 
     if (touchingPlatform == null)
     {
+      if (animator.GetCurrentAnimatorStateInfo(0).IsName(walkingAnimation)) animator.Play(idleAnimation);
       Debug.Log("Not on any platform");
     }
 

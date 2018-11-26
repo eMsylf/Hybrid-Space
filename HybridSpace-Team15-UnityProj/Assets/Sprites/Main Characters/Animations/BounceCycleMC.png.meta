@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: b9a80d49685d94cec99160e9b9aa1433
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BounceCycleMC_0
+    21300002: BounceCycleMC_1
+    21300004: BounceCycleMC_2
+    21300006: BounceCycleMC_3
+    21300008: BounceCycleMC_4
+    21300010: BounceCycleMC_5
+    21300012: BounceCycleMC_6
+    21300014: BounceCycleMC_7
+    21300016: BounceCycleMC_8
+    21300018: BounceCycleMC_9
+    21300020: BounceCycleMC_10
+    21300022: BounceCycleMC_11
+    21300024: BounceCycleMC_12
+    21300026: BounceCycleMC_13
+    21300028: BounceCycleMC_14
+    21300030: BounceCycleMC_15
+    21300032: BounceCycleMC_16
+    21300034: BounceCycleMC_17
+    21300036: BounceCycleMC_18
+    21300038: BounceCycleMC_19
+    21300040: BounceCycleMC_20
+    21300042: BounceCycleMC_21
+    21300044: BounceCycleMC_22
+    21300046: BounceCycleMC_23
+    21300048: BounceCycleMC_24
+    21300050: BounceCycleMC_25
+    21300052: BounceCycleMC_26
+    21300054: BounceCycleMC_27
+    21300056: BounceCycleMC_28
+    21300058: BounceCycleMC_29
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -60,7 +90,29 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -71,11 +123,611 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BounceCycleMC_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 146
+        width: 313
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c3a962341c04ed4b709b54fa195c20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_1
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 146
+        width: 335
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f66a3411c2b84c4bac77a9635caf945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_2
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 146
+        width: 367
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b25912dea9a42148cf39a310945ad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_3
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 146
+        width: 398
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da757b2370517480b9c69954cc9f7442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_4
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 146
+        width: 398
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0038b5f44af4148009980367377a0901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_5
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 146
+        width: 368
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4d216179872484fb2098dafdba07c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_6
+      rect:
+        serializedVersion: 2
+        x: 3101
+        y: 146
+        width: 337
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c4b4205b20e4615a541bd5defdc23e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_7
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 146
+        width: 315
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75da979f7b16c42ca80647ecaa24f33c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_8
+      rect:
+        serializedVersion: 2
+        x: 4123
+        y: 129
+        width: 280
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4dc5ddafe714025ac36fb295f1501e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_9
+      rect:
+        serializedVersion: 2
+        x: 4643
+        y: 113
+        width: 238
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bdaf6d7267d4296bc47cceb3509797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_10
+      rect:
+        serializedVersion: 2
+        x: 5157
+        y: 96
+        width: 201
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c8730eb88714a61a4bec9f83893683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_11
+      rect:
+        serializedVersion: 2
+        x: 5642
+        y: 113
+        width: 238
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4960d060cc3f94ddcb89a922999d792b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_12
+      rect:
+        serializedVersion: 2
+        x: 6122
+        y: 129
+        width: 282
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9148650c2c2204012b1411fdba8681eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_13
+      rect:
+        serializedVersion: 2
+        x: 6613
+        y: 146
+        width: 313
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88548946814b4bd3843e6d329e82499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_14
+      rect:
+        serializedVersion: 2
+        x: 7101
+        y: 146
+        width: 336
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cda88aed849b415f89d99456ed886c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_15
+      rect:
+        serializedVersion: 2
+        x: 7583
+        y: 146
+        width: 367
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708b25f2c14784c11965398b7811f160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_16
+      rect:
+        serializedVersion: 2
+        x: 8067
+        y: 146
+        width: 397
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c7caaabfb2244a783dce1603c7f301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_17
+      rect:
+        serializedVersion: 2
+        x: 8567
+        y: 146
+        width: 397
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6840ea909ac439b8978c51ee95c6ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_18
+      rect:
+        serializedVersion: 2
+        x: 9083
+        y: 146
+        width: 368
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db38575226ca84fca80a6d0b488e861d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_19
+      rect:
+        serializedVersion: 2
+        x: 9601
+        y: 146
+        width: 337
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e181da1a018b498183d767459eaf111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_20
+      rect:
+        serializedVersion: 2
+        x: 10112
+        y: 146
+        width: 315
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bce250ad0fb49729b1a4ed55bb72ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_21
+      rect:
+        serializedVersion: 2
+        x: 10623
+        y: 129
+        width: 280
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e2dd80e8a864749bedbed907e1ab43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_22
+      rect:
+        serializedVersion: 2
+        x: 11143
+        y: 113
+        width: 238
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3f2c90b2a684698ba1668db944fd53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_23
+      rect:
+        serializedVersion: 2
+        x: 11657
+        y: 96
+        width: 202
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29f605af079b427cbb7ba09a0259cc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_24
+      rect:
+        serializedVersion: 2
+        x: 12143
+        y: 113
+        width: 238
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dd51914520f485a8bddc583123d6c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_25
+      rect:
+        serializedVersion: 2
+        x: 12622
+        y: 129
+        width: 281
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd70b087db9a0468cb0e07ddcff9987d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_26
+      rect:
+        serializedVersion: 2
+        x: 13113
+        y: 146
+        width: 313
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a94a012d964d4ce585488feb0629ff1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_27
+      rect:
+        serializedVersion: 2
+        x: 13613
+        y: 146
+        width: 313
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21de47db2244f490381da4c34e8ae5da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_28
+      rect:
+        serializedVersion: 2
+        x: 14100
+        y: 146
+        width: 337
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ab958cb09bb40a4af7a9c1a93b7676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BounceCycleMC_29
+      rect:
+        serializedVersion: 2
+        x: 14583
+        y: 146
+        width: 367
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3622f16bb72ea4212a3cd3abbd9d498f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4f83446c51904412b9a2a51226889906
+    spriteID: 77b11522bfb0f47eab70ee502d3cbcbb
     vertices: []
     indices: 
     edges: []
