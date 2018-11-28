@@ -25,8 +25,8 @@ public class PlayerMovementSimulated : MonoBehaviour
     idleAnimation = "Idle";
   }
 
-  void Update()
-  {
+  void Update() 
+    { 
     //Debug.Log("Not adding force because touchingplatform == " + touchingPlatform);
     // only move while touching platform
     if (touchingPlatform != null && !touchingPlatform.name.Contains("JumpPlatform"))

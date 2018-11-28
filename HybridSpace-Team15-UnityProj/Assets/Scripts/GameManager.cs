@@ -50,8 +50,14 @@ public class GameManager : MonoBehaviour
     checkpoints = newCheckpoints;
   }
 
-  // called when player presses "simulate"
-  public void StartSimulation()
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            StartSimulation();
+        }
+    }
+
+    // called when player presses "simulate"
+    public void StartSimulation()
   {
     SpawnPlatforms();
 
