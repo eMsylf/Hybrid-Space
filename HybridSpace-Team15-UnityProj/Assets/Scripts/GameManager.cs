@@ -50,16 +50,18 @@ public class GameManager : MonoBehaviour
     checkpoints = newCheckpoints;
   }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+  private void Update()
+  {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
             StartSimulation();
         }
-    }
+  }
 
     // called when player presses "simulate"
-    public void StartSimulation()
+  public void StartSimulation() 
   {
-    SpawnPlatforms();
+        SpawnPlatforms();
 
     bool blockadeCollision = CollidingWithBlockade();
     Debug.Log("Blockade collision: " + blockadeCollision);
