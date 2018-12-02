@@ -8,6 +8,10 @@ public class PlayerMovementSimulated : MonoBehaviour
   public float jumpSpeed;
   public float gravitySpeed;
 
+  private Vector2 prevPosition;
+  private Vector2 newPosition;
+  private float timeStuck;
+
   private Rigidbody rb;
   private GameObject touchingPlatform;
   private bool activeSimulation;
@@ -16,7 +20,7 @@ public class PlayerMovementSimulated : MonoBehaviour
   private string idleAnimation;
 
   // Use this for initialization
-  void Start()
+  private void Start()
   {
     rb = GetComponent<Rigidbody>();
     animator = GetComponent<Animator>();
@@ -25,7 +29,7 @@ public class PlayerMovementSimulated : MonoBehaviour
     idleAnimation = "Idle";
   }
 
-  void Update()
+  private void Update()
   {
     //Debug.Log("Not adding force because touchingplatform == " + touchingPlatform);
     // only move while touching platform
@@ -34,7 +38,22 @@ public class PlayerMovementSimulated : MonoBehaviour
       // simulate while simulation is active
       if (activeSimulation)
       {
+        // update position
+        prevPosition = newPosition;
         rb.AddForce(Vector3.left * speed);
+        newPosition = transform.position;
+
+        // if player stuck, reset position
+        if (PlayerStuck())
+        {
+          Debug.Log("PLAYER STUCK");
+
+          EnableMovement(false);
+          transform.position = GameManager.instance.ActiveCheckpoint.position;
+
+          GameManager.instance.ResetSimulation();
+        }
+
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName(walkingAnimation)) animator.Play(walkingAnimation);
       }
 
@@ -50,7 +69,7 @@ public class PlayerMovementSimulated : MonoBehaviour
     }
   }
 
-  void OnCollisionStay(Collision c)
+  private void OnCollisionStay(Collision c)
   {
     if (c.contacts.Length > 0)
     {
@@ -67,7 +86,7 @@ public class PlayerMovementSimulated : MonoBehaviour
     }
   }
 
-  void OnCollisionExit(Collision collision)
+  private void OnCollisionExit(Collision collision)
   {
     // if collision with checkpoint trigger, don't reset touching platform (causes 
     //  player to be immovable)
@@ -80,6 +99,24 @@ public class PlayerMovementSimulated : MonoBehaviour
   public void EnableMovement(bool b)
   {
     activeSimulation = b;
+  }
+
+  private bool PlayerStuck()
+  {
+    if ((prevPosition - newPosition).magnitude < 0.05f)
+    {
+      timeStuck += Time.deltaTime;
+      if (timeStuck >= 2f)
+      {
+        return true;
+      }
+    }
+    else
+    {
+      timeStuck = 0f;
+    }
+
+    return false;
   }
 
 }

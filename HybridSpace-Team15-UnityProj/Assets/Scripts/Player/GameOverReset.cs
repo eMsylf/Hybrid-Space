@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameOverReset : MonoBehaviour
 {
-
   public float threshold;
 
   void Update()
