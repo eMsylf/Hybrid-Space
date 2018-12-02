@@ -20,7 +20,7 @@ public class GameOverReset : MonoBehaviour
   void ResetLevel()
   {
     GetComponent<PlayerMovementSimulated>().EnableMovement(false);
-    transform.position = GameManager.instance.ActiveCheckpoint.playerPosition;
+    transform.position = GameManager.instance.ActiveCheckpoint.position;
 
     GameManager.instance.ResetSimulation();
   }

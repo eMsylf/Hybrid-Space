@@ -25,8 +25,8 @@ public class PlayerMovementSimulated : MonoBehaviour
     idleAnimation = "Idle";
   }
 
-  void Update() 
-    { 
+  void Update()
+  {
     //Debug.Log("Not adding force because touchingplatform == " + touchingPlatform);
     // only move while touching platform
     if (touchingPlatform != null && !touchingPlatform.name.Contains("JumpPlatform"))
@@ -42,12 +42,12 @@ public class PlayerMovementSimulated : MonoBehaviour
 
     if (touchingPlatform == null)
     {
+      // add gravity
+      rb.AddForce(Vector3.down * gravitySpeed);
+
       if (animator.GetCurrentAnimatorStateInfo(0).IsName(walkingAnimation)) animator.Play(idleAnimation);
       Debug.Log("Not on any platform");
     }
-
-    // add gravity
-    rb.AddForce(Vector3.down * gravitySpeed);
   }
 
   void OnCollisionStay(Collision c)

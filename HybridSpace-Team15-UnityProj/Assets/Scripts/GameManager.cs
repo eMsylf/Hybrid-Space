@@ -16,13 +16,13 @@ public class GameManager : MonoBehaviour
   public static GameManager instance = null;
   public GameObject normalPlatform;
   public GameObject jumpPlatform;
-  public Checkpoint[] checkpoints;
+  public Transform[] checkpointTransforms;
 
   private GameObject player;
   private int activeCheckpointIndex;
 
   public int ActiveCheckpointIndex { get { return activeCheckpointIndex; } }
-  public Checkpoint ActiveCheckpoint { get { return checkpoints[activeCheckpointIndex]; } }
+  public Transform ActiveCheckpoint { get { return checkpointTransforms[activeCheckpointIndex]; } }
 
   // Use this for initialization
   void Start()
@@ -36,32 +36,20 @@ public class GameManager : MonoBehaviour
 
     player = GameObject.FindGameObjectWithTag("Player");
 
-    // include startpoint
-    Checkpoint[] newCheckpoints = new Checkpoint[checkpoints.Length + 1];
-    Checkpoint startPoint;
-    startPoint.playerPosition = player.GetComponent<Transform>().position;
-    startPoint.cameraPosition = Camera.main.transform.position;
-    newCheckpoints[0] = startPoint;
-    for (int i = 1; i < newCheckpoints.Length; i++)
-    {
-      newCheckpoints[i] = checkpoints[i - 1];
-    }
-
-    checkpoints = newCheckpoints;
   }
 
   private void Update()
   {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            StartSimulation();
-        }
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      StartSimulation();
+    }
   }
 
-    // called when player presses "simulate"
-  public void StartSimulation() 
+  // called when player presses "simulate"
+  public void StartSimulation()
   {
-        SpawnPlatforms();
+    SpawnPlatforms();
 
     bool blockadeCollision = CollidingWithBlockade();
     Debug.Log("Blockade collision: " + blockadeCollision);
@@ -87,7 +75,7 @@ public class GameManager : MonoBehaviour
   {
     player.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
     activeCheckpointIndex++;
-    Camera.main.GetComponent<NextCheckpointPosition>().GoToNextCheckPoint(checkpoints[activeCheckpointIndex]);
+    Camera.main.GetComponent<NextCheckpointPosition>().GoToNextCheckPoint(checkpointTransforms[activeCheckpointIndex]);
 
     ResetLevel();
   }
