@@ -11,17 +11,9 @@ public class GameOverReset : MonoBehaviour
     if (transform.position.y < threshold)
     {
       GetComponent<Rigidbody>().isKinematic = true; // remove momentum
-      ResetLevel();
+      GameManager.instance.ResetSimulation();
       GetComponent<Rigidbody>().isKinematic = false;
     }
-  }
-
-  void ResetLevel()
-  {
-    GetComponent<PlayerMovementSimulated>().EnableMovement(false);
-    transform.position = GameManager.instance.ActiveCheckpoint.position;
-
-    GameManager.instance.ResetSimulation();
   }
 
 }

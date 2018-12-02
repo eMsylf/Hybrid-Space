@@ -48,9 +48,6 @@ public class PlayerMovementSimulated : MonoBehaviour
         {
           Debug.Log("PLAYER STUCK");
 
-          EnableMovement(false);
-          transform.position = GameManager.instance.ActiveCheckpoint.position;
-
           GameManager.instance.ResetSimulation();
         }
 

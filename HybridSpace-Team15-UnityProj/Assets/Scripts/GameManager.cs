@@ -68,6 +68,9 @@ public class GameManager : MonoBehaviour
   // called when player dies
   public void ResetSimulation()
   {
+    player.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
+    player.transform.position = ActiveCheckpoint.position;
+
     ResetLevel();
   }
 
