@@ -1144,6 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4971947078794b8badc07af7601ccac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 2.5
 --- !u!114 &910049324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,7 +1192,6 @@ MonoBehaviour:
   checkpointTransforms:
   - {fileID: 1244969432}
   - {fileID: 127784235}
-  - {fileID: 1563990730}
 --- !u!4 &932192401
 Transform:
   m_ObjectHideFlags: 0
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelResetButton: 114
+  CheckpointResetButton: 116
 --- !u!21 &1101019056
 Material:
   serializedVersion: 6
@@ -2099,11 +2100,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
   m_IsPrefabAsset: 0
---- !u!4 &1563990730 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4550201470624546, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7,
-    type: 2}
-  m_PrefabInternal: {fileID: 70762457}
 --- !u!1 &1641419567
 GameObject:
   m_ObjectHideFlags: 0
