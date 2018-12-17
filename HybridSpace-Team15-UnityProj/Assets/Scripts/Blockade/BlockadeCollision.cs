@@ -11,12 +11,8 @@ public class BlockadeCollision : MonoBehaviour
     coll = GetComponent<Collider>();
   }
 
-  public bool IsColliding(GameObject[] platforms)
+  public bool IsColliding(GameObject platform)
   {
-    foreach (GameObject platform in platforms)
-    {
-      if (coll.bounds.Intersects(platform.GetComponent<Collider>().bounds)) return true;
-    }
-    return false;
+    return coll.bounds.Intersects(platform.GetComponent<Collider>().bounds);
   }
 }

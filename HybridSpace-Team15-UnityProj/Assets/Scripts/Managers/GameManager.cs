@@ -49,9 +49,13 @@ public class GameManager : MonoBehaviour
   // called when player presses "simulate"
   public void StartSimulation()
   {
-    SpawnPlatforms();
+    if (SpawnPlatforms())
+    {
+      player.GetComponent<PlayerMovementSimulated>().EnableMovement(true);
+      TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+    }
 
-    bool blockadeCollision = CollidingWithBlockade();
+    /*bool blockadeCollision = CollidingWithBlockade();
     Debug.Log("Blockade collision: " + blockadeCollision);
 
     if (!blockadeCollision)
@@ -61,8 +65,24 @@ public class GameManager : MonoBehaviour
     }
     else
     {
-      ResetLevel();
+      player.GetComponent<PlayerCollisionFlash>().DoFlashing();
+      //ResetLevel();
+    }*/
+  }
+
+  private bool CollidingWithBlockade(GameObject platform)
+  {
+    GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
+    foreach (GameObject blockade in blockades)
+    {
+      //Debug.Log("There is a blockade, its name is: " + blockade.name);
+      //Debug.Log("Its collision value is: " + blockade.GetComponent<BlockadeCollision>().IsColliding());
+      if (blockade.GetComponent<BlockadeCollision>().IsColliding(platform))
+      {
+        return true;
+      }
     }
+    return false;
   }
 
   // called when player dies
@@ -97,9 +117,12 @@ public class GameManager : MonoBehaviour
     TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
   }
 
-  private void SpawnPlatforms()
+  // returns true if platforms could be spawned
+  private bool SpawnPlatforms()
   {
     GameObject[] platforms = GameObject.FindGameObjectsWithTag("Target");
+    List<GameObject> platformCache = new List<GameObject>();
+
     foreach (GameObject platform in platforms)
     {
       // only get rendered platforms
@@ -119,30 +142,35 @@ public class GameManager : MonoBehaviour
           break;
         default:
           Debug.Log("ERROR: platform not valid");
-          return;
+          return false;
       }
 
       GameObject platform_instance = (GameObject)Instantiate(platformPrefab, pos, rot);
       SetScaleAndPosition(ref platform_instance);
 
+      if (!CollidingWithBlockade(platform_instance))
+      {
+        platformCache.Add(platform_instance);
+      }
+      else
+      {
+
+        platform.GetComponentInChildren<PlatformCollisionFlash>().DoFlashing();
+        // first destroy the colliding platform
+        Destroy(platform_instance);
+
+        // then destroy every platform previously added
+        foreach (GameObject spawnedPlatform in platformCache)
+        {
+          Destroy(spawnedPlatform);
+        }
+        return false;
+      }
+
       platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
     }
-  }
 
-  private bool CollidingWithBlockade()
-  {
-    GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
-    GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
-    foreach (GameObject blockade in blockades)
-    {
-      //Debug.Log("There is a blockade, its name is: " + blockade.name);
-      //Debug.Log("Its collision value is: " + blockade.GetComponent<BlockadeCollision>().IsColliding());
-      if (blockade.GetComponent<BlockadeCollision>().IsColliding(platforms))
-      {
-        return true;
-      }
-    }
-    return false;
+    return true;
   }
 
   private void SetScaleAndPosition(ref GameObject obj)
