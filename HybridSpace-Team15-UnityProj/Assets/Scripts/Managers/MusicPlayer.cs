@@ -17,10 +17,10 @@ public class MusicPlayer : MonoBehaviour
 
   private AudioSource audioSource;
 
-  private MusicPlayer Instance;
+  private static MusicPlayer Instance;
 
   // Use this for initialization
-  void Start()
+  void Awake()
   {
     if (Instance == null)
     {
