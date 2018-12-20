@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4270917172671376}
   - component: {fileID: 212664526376403666}
   - component: {fileID: 65342510173192734}
+  - component: {fileID: 114787529353139128}
   m_Layer: 0
   m_Name: Grassy float
   m_TagString: Blockade
@@ -53,6 +54,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.19, y: 1.6, z: 2}
   m_Center: {x: 0, y: -0.38, z: 0}
+--- !u!114 &114787529353139128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433359549022734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d22a17b3787b49cf94e7a28ceae2cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212664526376403666
 SpriteRenderer:
   m_ObjectHideFlags: 1
