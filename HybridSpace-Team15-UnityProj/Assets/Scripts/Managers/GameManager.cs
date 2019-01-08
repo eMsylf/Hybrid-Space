@@ -5,12 +5,14 @@ using UnityEngine.UI;
 using Vuforia;
 
 [System.Serializable]
-public struct Checkpoint {
+public struct Checkpoint
+{
     public Vector3 playerPosition;
     public Vector3 cameraPosition;
 }
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     public static GameManager instance = null;
     public GameObject normalPlatform;
     public GameObject jumpPlatform;
@@ -23,59 +25,72 @@ public class GameManager : MonoBehaviour {
     public Transform ActiveCheckpoint { get { return checkpointTransforms[activeCheckpointIndex]; } }
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         if (instance == null)
             instance = this;
 
         else if (instance != this)
             Destroy(gameObject);
 
-
         player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             StartSimulation();
         }
     }
 
     // called when player presses "simulate"
-    public void StartSimulation() {
+    public void StartSimulation()
+    {
         SpawnPlatforms();
 
         bool blockadeCollision = CollidingWithBlockade();
         Debug.Log("Blockade collision: " + blockadeCollision);
 
-        if (!blockadeCollision) {
+        if (!blockadeCollision)
+        {
             player.GetComponent<PlayerMovementSimulated>().EnableMovement(true);
             TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-        } else {
+        }
+        else
+        {
             ResetLevel();
         }
     }
 
     // called when player dies
-    public void ResetSimulation() {
+    public void ResetSimulation()
+    {
         player.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
         player.transform.position = ActiveCheckpoint.position;
 
         ResetLevel();
     }
 
-    public void NextCheckpoint() {
+    public void NextCheckpoint()
+    {
         player.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         activeCheckpointIndex++;
         Camera.main.GetComponent<NextCheckpointPosition>().GoToNextCheckPoint(checkpointTransforms[activeCheckpointIndex]);
 
         ResetLevel();
     }
 
-    private void ResetLevel() {
+    private void ResetLevel()
+    {
         // remove platforms
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
-        foreach (GameObject platform in platforms) {
+        foreach (GameObject platform in platforms)
+        {
             // only get rendered platforms
             Destroy(platform);
         }
@@ -84,9 +99,11 @@ public class GameManager : MonoBehaviour {
         TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
     }
 
-    private void SpawnPlatforms() {
+    private void SpawnPlatforms()
+    {
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Target");
-        foreach (GameObject platform in platforms) {
+        foreach (GameObject platform in platforms)
+        {
             // only get rendered platforms
             if (!platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled) continue;
 
@@ -94,7 +111,8 @@ public class GameManager : MonoBehaviour {
             Quaternion rot = platform.transform.rotation;
             string type = platform.transform.GetChild(0).name;
             GameObject platformPrefab = null;
-            switch (type) {
+            switch (type)
+            {
                 case "NormalPlatform":
                     platformPrefab = normalPlatform;
                     break;
@@ -106,28 +124,32 @@ public class GameManager : MonoBehaviour {
                     return;
             }
 
-            GameObject platform_instance = (GameObject)Instantiate(platformPrefab, pos, rot);
+            GameObject platform_instance = (GameObject) Instantiate(platformPrefab, pos, rot);
             SetScaleAndPosition(ref platform_instance);
 
             platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
-    private bool CollidingWithBlockade() {
+    private bool CollidingWithBlockade()
+    {
         GameObject[] blockades = GameObject.FindGameObjectsWithTag("Blockade");
         GameObject[] platforms = GameObject.FindGameObjectsWithTag("Platform");
 
-        foreach (GameObject blockade in blockades) {
+        foreach (GameObject blockade in blockades)
+        {
             //Debug.Log("There is a blockade, its name is: " + blockade.name);
             //Debug.Log("Its collision value is: " + blockade.GetComponent<BlockadeCollision>().IsColliding());
-            if (blockade.GetComponent<BlockadeCollision>().IsColliding(platforms)) {
+            if (blockade.GetComponent<BlockadeCollision>().IsColliding(platforms))
+            {
                 return true;
             }
         }
         return false;
     }
 
-    private void SetScaleAndPosition(ref GameObject obj) {
+    private void SetScaleAndPosition(ref GameObject obj)
+    {
         Camera cam = Camera.main;
 
         float oldDistance = (obj.transform.position - cam.transform.position).magnitude;
