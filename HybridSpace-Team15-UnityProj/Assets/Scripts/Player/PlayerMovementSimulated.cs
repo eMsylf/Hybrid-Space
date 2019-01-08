@@ -8,6 +8,10 @@ public class PlayerMovementSimulated : MonoBehaviour
   public float jumpSpeed;
   public float gravitySpeed;
 
+  public Vector3 collisionSpherePosition;
+  public float collisionSphereRadius;
+  public LayerMask collisionLayerMask;
+
   private Vector2 prevPosition;
   private Vector2 newPosition;
   private float timeStuck;
@@ -31,9 +35,10 @@ public class PlayerMovementSimulated : MonoBehaviour
 
   private void Update()
   {
-    //Debug.Log("Not adding force because touchingplatform == " + touchingPlatform);
+    CheckCollision();
+
     // only move while touching platform
-    if (touchingPlatform != null && !touchingPlatform.name.Contains("JumpPlatform"))
+    if (touchingPlatform != null)
     {
       // simulate while simulation is active
       if (activeSimulation)
@@ -66,22 +71,44 @@ public class PlayerMovementSimulated : MonoBehaviour
     }
   }
 
-  private void OnCollisionStay(Collision c)
+  private void CheckCollision()
+  {
+    Collider[] colliders = Physics.OverlapSphere(transform.position + collisionSpherePosition, collisionSphereRadius, collisionLayerMask);
+    if (colliders.Length > 0)
+    {
+      touchingPlatform = colliders[0].gameObject;
+      Debug.Log("<b>Colliding with: </b>" + colliders[0].name);
+    }
+    else if (touchingPlatform != null)
+    {
+      touchingPlatform = null;
+    }
+  }
+
+  private void OnDrawGizmos()
+  {
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(transform.position + collisionSpherePosition, collisionSphereRadius);
+  }
+
+  /*private void OnCollisionStay(Collision c)
   {
     if (c.contacts.Length > 0)
     {
       // extract contact point and see if it is on a flat surface
-      ContactPoint contact = c.contacts[0];
-      if (Vector3.Dot(contact.normal.normalized, Vector3.up) > 0.9)
+      for (int i = 0; i < c.contacts.Length; i++)
       {
-        touchingPlatform = c.transform.gameObject;
-      }
-      else
-      {
-        touchingPlatform = null;
+        ContactPoint contact = c.contacts[i];
+        if (Vector3.Dot(contact.normal.normalized, Vector3.up) > 0.9)
+        {
+          touchingPlatform = c.transform.gameObject;
+          return;
+        }
       }
     }
-  }
+
+    touchingPlatform = null;
+  }*/
 
   private void OnCollisionExit(Collision collision)
   {
@@ -95,6 +122,7 @@ public class PlayerMovementSimulated : MonoBehaviour
 
   public void EnableMovement(bool b)
   {
+    if (!b) Debug.Log("Disable movement");
     activeSimulation = b;
   }
 

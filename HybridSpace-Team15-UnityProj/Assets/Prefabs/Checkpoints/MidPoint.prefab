@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4512589082718070}
   - component: {fileID: 212644326423265218}
   - component: {fileID: 65478228742244518}
+  - component: {fileID: 114532102707180384}
   m_Layer: 0
   m_Name: Grassy float
   m_TagString: Blockade
@@ -40,7 +41,7 @@ GameObject:
   - component: {fileID: 23928350606039884}
   - component: {fileID: 64357034524968174}
   - component: {fileID: 114570888376468882}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CheckpointTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,6 +172,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.19, y: 1.6, z: 2}
   m_Center: {x: 0, y: -0.38, z: 0}
+--- !u!114 &114532102707180384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277943825622152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d22a17b3787b49cf94e7a28ceae2cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114570888376468882
 MonoBehaviour:
   m_ObjectHideFlags: 1
