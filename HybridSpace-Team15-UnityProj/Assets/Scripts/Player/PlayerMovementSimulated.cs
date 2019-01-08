@@ -122,7 +122,10 @@ public class PlayerMovementSimulated : MonoBehaviour
 
   public void EnableMovement(bool b)
   {
-    if (!b) Debug.Log("Disable movement");
+    if (!b && animator.GetCurrentAnimatorStateInfo(0).IsName(walkingAnimation))
+    {
+      animator.Play(idleAnimation);
+    }
     activeSimulation = b;
   }
 

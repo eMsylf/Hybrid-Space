@@ -14,11 +14,12 @@ public struct Checkpoint
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
+    public bool fixedPlatformRotation = false;
     public GameObject normalPlatform;
     public GameObject jumpPlatform;
     public Transform[] checkpointTransforms;
 
-    public GameObject player;
+    private GameObject player;
     private int activeCheckpointIndex;
 
     public int ActiveCheckpointIndex { get { return activeCheckpointIndex; } }
@@ -108,7 +109,7 @@ public class GameManager : MonoBehaviour
             if (!platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled) continue;
 
             Vector3 pos = platform.transform.position;
-            Quaternion rot = platform.transform.rotation;
+            Quaternion rot = platform.transform.GetChild(0).rotation;
             string type = platform.transform.GetChild(0).name;
             GameObject platformPrefab = null;
             switch (type)
@@ -164,6 +165,6 @@ public class GameManager : MonoBehaviour
 
         obj.transform.position = worldPos;
         obj.transform.localScale = Vector3.one * newSize * obj.transform.localScale.x;
-        obj.transform.rotation = Quaternion.identity;
+        if (fixedPlatformRotation) obj.transform.rotation = Quaternion.identity;
     }
 }
