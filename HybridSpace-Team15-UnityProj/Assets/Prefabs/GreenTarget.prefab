@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4549791725707636}
   - component: {fileID: 212835381291646036}
+  - component: {fileID: 114346427127605794}
   m_Layer: 0
   m_Name: JumpPlatform
   m_TagString: Untagged
@@ -146,6 +147,20 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 1
+--- !u!114 &114346427127605794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067076681296178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashSpeed: 50
+  flashTime: 0.5
+  maxWhiteness: 0.75
 --- !u!114 &114421270622007220
 MonoBehaviour:
   m_ObjectHideFlags: 1

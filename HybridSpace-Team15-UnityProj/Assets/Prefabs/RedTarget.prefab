@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4793678949801228}
   - component: {fileID: 212004063236212892}
+  - component: {fileID: 114511667598257258}
   m_Layer: 0
   m_Name: NormalPlatform
   m_TagString: Untagged
@@ -138,6 +139,20 @@ MonoBehaviour:
   m_Script: {fileID: -1770992566, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114511667598257258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814666718323116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashSpeed: 50
+  flashTime: 0.5
+  maxWhiteness: 0.75
 --- !u!114 &114969306584299910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +187,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c45b55670273c49119c27ebbfb86e83d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
