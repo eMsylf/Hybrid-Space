@@ -1432,9 +1432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashSpeed: 0
-  flashTime: 0
-  maxWhiteness: 0
+  flashSpeed: 50
+  flashTime: 0.5
+  maxWhiteness: 0.75
 --- !u!43 &1237472488
 Mesh:
   m_ObjectHideFlags: 0
@@ -1701,6 +1701,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2028191484}
+    - target: {fileID: 212004063236212892, guid: 2cdaafff506ec4b2989782c4f6a098e4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c45b55670273c49119c27ebbfb86e83d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cdaafff506ec4b2989782c4f6a098e4, type: 2}
   m_IsPrefabAsset: 0
@@ -1720,9 +1725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashSpeed: 0
-  flashTime: 0
-  maxWhiteness: 0
+  flashSpeed: 50
+  flashTime: 0.5
+  maxWhiteness: 0.75
 --- !u!1001 &1535993375
 Prefab:
   m_ObjectHideFlags: 0
