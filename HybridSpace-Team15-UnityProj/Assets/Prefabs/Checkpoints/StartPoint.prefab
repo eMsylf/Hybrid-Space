@@ -174,11 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a422a1e9397d94c488d846a85753fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3500
+  speed: 2500
   jumpSpeed: 800
   gravitySpeed: 4000
-  collisionSpherePosition: {x: 0.06, y: -0.14, z: 0}
-  collisionSphereRadius: 0.66
+  collisionSpherePosition: {x: 0.24, y: -0.65, z: 0}
+  collisionSphereRadius: 0.75
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 823

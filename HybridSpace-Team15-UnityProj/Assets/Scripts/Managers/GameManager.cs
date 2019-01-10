@@ -129,12 +129,14 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject platform in platforms)
         {
+            Transform platformTargetImage = platform.transform.GetChild(0);
             // only get rendered platforms
-            if (!platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled) continue;
+            if (!platformTargetImage.GetComponent<SpriteRenderer>().enabled) continue;
 
             Vector3 pos = platform.transform.position;
-            Quaternion rot = platform.transform.rotation;
-            string type = platform.transform.GetChild(0).name;
+            Quaternion rot = platformTargetImage.rotation;
+            Debug.Log("ROTATION: " + rot);
+            string type = platformTargetImage.name;
             GameObject platformPrefab = null;
             switch (type)
             {
@@ -145,7 +147,7 @@ public class GameManager : MonoBehaviour
                     platformPrefab = jumpPlatform;
                     break;
                 default:
-                    Debug.Log("ERROR: platform not valid");
+                    Debug.LogError("ERROR: platform not valid. -- Felix");
                     return false;
             }
 
@@ -171,7 +173,7 @@ public class GameManager : MonoBehaviour
                 return false;
             }
 
-            platform.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            platformTargetImage.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         return true;
@@ -194,5 +196,12 @@ public class GameManager : MonoBehaviour
         obj.transform.position = worldPos;
         obj.transform.localScale = Vector3.one * newSize * obj.transform.localScale.x;
         if (fixedPlatformRotation) obj.transform.rotation = Quaternion.identity;
+        else
+        {
+            /*obj.transform.forward = Vector3.forward;
+            obj.transform.up = obj.transform.parent.parent.up;
+            obj.transform.right = obj.transform.parent.parent.right;
+            obj.transform.right = new Vector3(obj.transform.right.x, obj.transform.right.y, 0);*/
+        }
     }
 }
