@@ -1332,6 +1332,11 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 939932457}
+    - target: {fileID: 212534330304267506, guid: 5ab5730d0a2634e9ab285486c488ab20,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c45b55670273c49119c27ebbfb86e83d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab5730d0a2634e9ab285486c488ab20, type: 2}
   m_IsPrefabAsset: 0
@@ -1462,6 +1467,11 @@ Prefab:
     - target: {fileID: 4338045048543762, guid: 6de55cf559c891043b19f910ade4d4c8, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000801767065666, guid: 6de55cf559c891043b19f910ade4d4c8,
+        type: 2}
+      propertyPath: collisionSpherePosition.x
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de55cf559c891043b19f910ade4d4c8, type: 2}

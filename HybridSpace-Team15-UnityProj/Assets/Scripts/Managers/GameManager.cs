@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-
+                Debug.Log("SHOULD FLASH");
                 platform.GetComponentInChildren<PlatformCollisionFlash>().DoFlashing();
                 // first destroy the colliding platform
                 Destroy(platform_instance);
