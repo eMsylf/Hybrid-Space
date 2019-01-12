@@ -2,6 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Medal
+{
+  BRONZE = 0,
+  SILVER = 1,
+  GOLD = 2
+}
+
+public struct CheckpointResult
+{
+  public Medal medal;
+  public int score;
+}
+
 public class CollectableManager : MonoBehaviour
 {
 
@@ -13,6 +26,8 @@ public class CollectableManager : MonoBehaviour
     get;
     set;
   }
+
+  private List<CheckpointResult> checkpointResults;
 
   // Use this for initialization
   void Awake()
@@ -27,5 +42,13 @@ public class CollectableManager : MonoBehaviour
     }
 
     DontDestroyOnLoad(gameObject);
+
+    checkpointResults = new List<CheckpointResult>();
   }
+
+  public void AddCheckpointResult(CheckpointResult result)
+  {
+    checkpointResults.Add(result);
+  }
+
 }

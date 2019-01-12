@@ -8,10 +8,10 @@ public class CollectableTrigger : MonoBehaviour
   {
     if (c.gameObject.tag == "Player")
     {
-      CollectableManager.Instance.Score++;
+      CheckpointScore.instance.currentScore++;
       Destroy(gameObject); // get rid of collectable
 
-      Debug.Log(CollectableManager.Instance.Score);
+      //Debug.Log(CollectableManager.Instance.Score);
     }
   }
 

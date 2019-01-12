@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,7 @@ public struct Checkpoint
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
+    public static GameManager instance;
     public bool fixedPlatformRotation = false;
     public GameObject normalPlatform;
     public GameObject jumpPlatform;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     public Transform ActiveCheckpoint { get { return checkpointTransforms[activeCheckpointIndex]; } }
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         if (instance == null)
             instance = this;
@@ -34,8 +35,12 @@ public class GameManager : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        //DontDestroyOnLoad(gameObject);
+    }
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
