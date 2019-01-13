@@ -1311,6 +1311,11 @@ Prefab:
       propertyPath: mWorldCenter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 20483062973495988, guid: c21c8150f06f28d40827c6f1a70debff,
+        type: 2}
+      propertyPath: field of view
+      value: 31.71873
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21c8150f06f28d40827c6f1a70debff, type: 2}
   m_IsPrefabAsset: 0
