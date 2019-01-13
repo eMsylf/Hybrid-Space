@@ -16,8 +16,8 @@ MonoBehaviour:
     ufoLicenseKey: QWN4U0VOZi8vLy8vQUFBQUtDOHFPSkQra2toNGtxYWFFWS9XNUpNL1lsSHd5aDdoNTVkc1BYTXpuOGQrRWJsTEt3UTBjUi9RTzRGSEhLenY5TmlwWEhnQ252cThBUmpiMGpwd1NaWW9NcnFJSDlNdjVnaHcwNDRIdmhiNnlMYVRzVkZEb05jMTVxR0xqZnRmVVFXb01uZFcyQmJUZnJhSTMwUGNWK0NkNWlzWmt4VjNVRlppaGIzbmdBaDg1TFZHTUJhWmpXUEtZUXlDOCtZSEZ4R2xhMEplTjJOLzJwQlJXQXNWU1QwWWJ2ZEgrZE9pOTk4cXkwa3A1VXRkemVPZnpQMUxoRjJpOXBPNEtQQ0NEcVhjdjkwUERPNDVqbUpRcW9Pd3pEbExWSlQxRFNBemZoajBjak84a1NXQ01Vd1YrRXRFdFZhVml2Y2JBSTdiQjAxeTNnOXl4S095ZGM2YkFJVUQyRVVFbkFoTStRTjY5bHlWaWduWlFVaVk=
     delayedInitialization: 0
     cameraDeviceModeSetting: -2
-    maxSimultaneousImageTargets: 2
-    maxSimultaneousObjectTargets: 2
+    maxSimultaneousImageTargets: 3
+    maxSimultaneousObjectTargets: 3
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 2
@@ -64,7 +64,7 @@ MonoBehaviour:
     autoInitTracker: 0
     autoStartTracker: 0
   webcam:
-    deviceNameSetInEditor: Lenovo EasyCamera
+    deviceNameSetInEditor: CamTwist
     flipHorizontally: 0
     turnOffWebCam: 0
     renderTextureLayer: 30
