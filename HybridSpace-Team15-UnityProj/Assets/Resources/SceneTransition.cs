@@ -8,6 +8,9 @@ public class SceneTransition : MonoBehaviour
 {
   public static SceneTransition Instance;
 
+  private int currentLevel;
+  private const int NumberOfLevels = 5;
+
   // Use this for initialization
   void Awake()
   {
@@ -23,17 +26,28 @@ public class SceneTransition : MonoBehaviour
     DontDestroyOnLoad(gameObject);
   }
 
+  void Start()
+  {
+    string firstLevel = SceneManager.GetActiveScene().name;
+
+    currentLevel = int.Parse("" + firstLevel[(firstLevel.Length - 1)]);
+  }
+
   public void GoToNextLevel()
   {
-    int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-    if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+    //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+    currentLevel++;
+
+    if (currentLevel <= NumberOfLevels)
     {
-      SceneManager.LoadScene(nextSceneIndex);
+      SceneManager.LoadScene(string.Format("Scenes/Lvl0{0}", currentLevel));
     }
     else
     {
-      GameObject finishText = GameObject.Find("FinishText");
-      finishText.GetComponent<Text>().enabled = true;
+      //GameObject finishText = GameObject.Find("FinishText");
+      //finishText.GetComponent<Text>().enabled = true;
+
+      Debug.Log("<b>GAME ENDED</b>");
     }
   }
 }
