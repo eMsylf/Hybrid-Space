@@ -511,7 +511,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4853510485377394, guid: c21c8150f06f28d40827c6f1a70debff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.88
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4853510485377394, guid: c21c8150f06f28d40827c6f1a70debff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -548,13 +548,18 @@ Prefab:
     - target: {fileID: 114078299263939628, guid: c21c8150f06f28d40827c6f1a70debff,
         type: 2}
       propertyPath: offset
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114078299263939628, guid: c21c8150f06f28d40827c6f1a70debff,
         type: 2}
       propertyPath: MidPointTransform
       value: 
       objectReference: {fileID: 1753334202}
+    - target: {fileID: 20483062973495988, guid: c21c8150f06f28d40827c6f1a70debff,
+        type: 2}
+      propertyPath: field of view
+      value: 31.71873
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21c8150f06f28d40827c6f1a70debff, type: 2}
   m_IsPrefabAsset: 0
