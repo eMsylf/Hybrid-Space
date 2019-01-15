@@ -11,7 +11,7 @@ public class SetCheckpointPrefabValues : MonoBehaviour
 
 	public void SetLevel(int level)
 	{
-		levelText.text = level.ToString();
+		levelText.text = string.Format("#{0}", level);
 	}
 
 	public void SetScore(int score)

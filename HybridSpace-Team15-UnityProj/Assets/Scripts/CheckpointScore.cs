@@ -104,7 +104,7 @@ public class CheckpointScore : MonoBehaviour
 		foreach (CheckpointResult result in results)
 		{
 			GameObject newCheckpointPrefab = Instantiate(checkpointPrefab);
-			var valueSet = checkpointPrefab.GetComponent<SetCheckpointPrefabValues>();
+			var valueSet = newCheckpointPrefab.GetComponent<SetCheckpointPrefabValues>();
 
 			valueSet.SetLevel(result.level);
 			valueSet.SetScore(result.score);
