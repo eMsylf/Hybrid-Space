@@ -107,7 +107,7 @@ public class CheckpointScore : MonoBehaviour
 			var valueSet = newCheckpointPrefab.GetComponent<SetCheckpointPrefabValues>();
 
 			valueSet.SetLevel(result.level);
-			valueSet.SetScore(result.score);
+			valueSet.SetScore(result.score, result.maxPossibleScore);
 			valueSet.SetMedalSprite(medalSprites[(int) result.medal]);
 			newCheckpointPrefab.transform.SetParent(checkpointsParent, false);
 		}
@@ -152,6 +152,7 @@ public class CheckpointScore : MonoBehaviour
 		result.medal = currentMedal;
 		result.score = currentScore;
 		result.level = SceneTransition.Instance.CurrentLevel;
+		result.maxPossibleScore = numCollectables;
 
 		CollectableManager.Instance.AddCheckpointResult(result);
 

@@ -13,6 +13,7 @@ public struct CheckpointResult
 {
   public Medal medal;
   public int score;
+  public int maxPossibleScore;
   public int level;
 }
 
