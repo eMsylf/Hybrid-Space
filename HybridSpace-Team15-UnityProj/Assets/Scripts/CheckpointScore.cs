@@ -95,6 +95,7 @@ public class CheckpointScore : MonoBehaviour
 		// find panel and set active
 		GameObject finishObject = GameObject.Find("FinishObject");
 		GameObject finishPanel = finishObject.transform.GetChild(0).gameObject;
+		Transform checkpointsParent = finishPanel.transform.Find("Checkpoints");
 		finishPanel.SetActive(true);
 
 		// create list of checkpoint scores
@@ -102,12 +103,13 @@ public class CheckpointScore : MonoBehaviour
 		List<CheckpointResult> results = CollectableManager.Instance.GetCheckpointResults;
 		foreach (CheckpointResult result in results)
 		{
-			Instantiate(checkpointPrefab, finishPanel.transform);
+			GameObject newCheckpointPrefab = Instantiate(checkpointPrefab);
 			var valueSet = checkpointPrefab.GetComponent<SetCheckpointPrefabValues>();
 
 			valueSet.SetLevel(result.level);
 			valueSet.SetScore(result.score);
 			valueSet.SetMedalSprite(medalSprites[(int) result.medal]);
+			newCheckpointPrefab.transform.SetParent(checkpointsParent, false);
 		}
 
 	}
