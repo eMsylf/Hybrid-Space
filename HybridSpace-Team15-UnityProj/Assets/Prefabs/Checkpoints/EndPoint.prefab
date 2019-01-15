@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 4517518972429036}
   - component: {fileID: 212339800236668746}
   - component: {fileID: 65328224130449400}
+  - component: {fileID: 114036318945096834}
   m_Layer: 0
   m_Name: EndPlatform
   m_TagString: Blockade
@@ -127,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694396155507874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.71, y: -1.62, z: 19}
+  m_LocalPosition: {x: -24.03, y: -3.42, z: 19}
   m_LocalScale: {x: 0.39999995, y: 0.39999995, z: 1}
   m_Children:
   - {fileID: 4517518972429036}
@@ -216,6 +217,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114036318945096834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339859650686918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d22a17b3787b49cf94e7a28ceae2cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114336273572490050
 MonoBehaviour:
   m_ObjectHideFlags: 1
