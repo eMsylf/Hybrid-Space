@@ -88,6 +88,30 @@ public class CheckpointScore : MonoBehaviour
 		// wait for button input
 	}
 
+	public void OnGameFinish()
+	{
+		checkpointPanel.SetActive(false);
+
+		// find panel and set active
+		GameObject finishObject = GameObject.Find("FinishObject");
+		GameObject finishPanel = finishObject.transform.GetChild(0).gameObject;
+		finishPanel.SetActive(true);
+
+		// create list of checkpoint scores
+		GameObject checkpointPrefab = (GameObject) Resources.Load("Checkpoint");
+		List<CheckpointResult> results = CollectableManager.Instance.GetCheckpointResults;
+		foreach (CheckpointResult result in results)
+		{
+			Instantiate(checkpointPrefab, finishPanel.transform);
+			var valueSet = checkpointPrefab.GetComponent<SetCheckpointPrefabValues>();
+
+			valueSet.SetLevel(result.level);
+			valueSet.SetScore(result.score);
+			valueSet.SetMedalSprite(medalSprites[(int) result.medal]);
+		}
+
+	}
+
 	// when player wants to try again
 	public void RetryLevel()
 	{
@@ -110,12 +134,8 @@ public class CheckpointScore : MonoBehaviour
 		startButton.SetActive(true);
 		resetButton.SetActive(true);
 
-		Debug.LogFormat("<b>HIGHEST SCORE BEFORE SCENE LOAD: {0}</b>", highestScore);
-
 		// reload level
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-		Debug.LogFormat("<b>HIGHEST SCORE AFTER SCENE LOAD: {0}</b>", highestScore);
 
 		// disable checkpoint screen
 		checkpointPanel.SetActive(false);
@@ -129,6 +149,7 @@ public class CheckpointScore : MonoBehaviour
 		CheckpointResult result = new CheckpointResult();
 		result.medal = currentMedal;
 		result.score = currentScore;
+		result.level = SceneTransition.Instance.CurrentLevel;
 
 		CollectableManager.Instance.AddCheckpointResult(result);
 
@@ -136,9 +157,15 @@ public class CheckpointScore : MonoBehaviour
 		// destroy singleton
 		instance = null;
 
-		SceneTransition.Instance.GoToNextLevel();
-
-		Destroy(gameObject);
+		if (SceneTransition.Instance.IsLastLevel)
+		{
+			OnGameFinish();
+		}
+		else
+		{
+			SceneTransition.Instance.GoToNextLevel();
+			Destroy(gameObject);
+		}
 	}
 
 	private void ShowMedal()

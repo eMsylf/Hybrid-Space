@@ -11,6 +11,9 @@ public class SceneTransition : MonoBehaviour
   private int currentLevel;
   private const int NumberOfLevels = 5;
 
+  public bool IsLastLevel { get { return currentLevel == NumberOfLevels; } }
+  public int CurrentLevel { get { return currentLevel; } }
+
   // Use this for initialization
   void Awake()
   {
@@ -41,13 +44,6 @@ public class SceneTransition : MonoBehaviour
     if (currentLevel <= NumberOfLevels)
     {
       SceneManager.LoadScene(string.Format("Scenes/Lvl0{0}", currentLevel));
-    }
-    else
-    {
-      //GameObject finishText = GameObject.Find("FinishText");
-      //finishText.GetComponent<Text>().enabled = true;
-
-      Debug.Log("<b>GAME ENDED</b>");
     }
   }
 }

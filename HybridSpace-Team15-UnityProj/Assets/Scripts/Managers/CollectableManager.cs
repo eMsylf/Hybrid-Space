@@ -13,6 +13,7 @@ public struct CheckpointResult
 {
   public Medal medal;
   public int score;
+  public int level;
 }
 
 public class CollectableManager : MonoBehaviour
@@ -28,6 +29,10 @@ public class CollectableManager : MonoBehaviour
   }
 
   private List<CheckpointResult> checkpointResults;
+  public List<CheckpointResult> GetCheckpointResults
+  {
+    get { return checkpointResults; }
+  }
 
   // Use this for initialization
   void Awake()
