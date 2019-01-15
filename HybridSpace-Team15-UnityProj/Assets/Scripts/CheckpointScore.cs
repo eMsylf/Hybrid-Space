@@ -210,8 +210,18 @@ public class CheckpointScore : MonoBehaviour
 		startButton = uiElements.startButton;
 		resetButton = uiElements.resetButton;
 
-		uiElements.retryButton.GetComponent<Button>().onClick.AddListener(RetryLevel);
-		uiElements.continueButton.GetComponent<Button>().onClick.AddListener(ContinueNextLevel);
+		Button retryButton = uiElements.retryButton.GetComponent<Button>();
+		Button continueButton = uiElements.continueButton.GetComponent<Button>();
+
+		if (retryButton.onClick == null)
+		{
+			retryButton.onClick.AddListener(RetryLevel);
+
+		}
+		if (continueButton.onClick == null)
+		{
+			continueButton.onClick.AddListener(ContinueNextLevel);
+		}
 	}
 
 }

@@ -38,7 +38,6 @@ public class SceneTransition : MonoBehaviour
 
   public void GoToNextLevel()
   {
-    //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
     currentLevel++;
 
     if (currentLevel <= NumberOfLevels)
