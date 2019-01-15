@@ -76,8 +76,16 @@ public class PlayerMovementSimulated : MonoBehaviour
     Collider[] colliders = Physics.OverlapSphere(transform.position + collisionSpherePosition, collisionSphereRadius, collisionLayerMask);
     if (colliders.Length > 0)
     {
-      touchingPlatform = colliders[0].gameObject;
-      Debug.Log("<b>Colliding with: </b>" + colliders[0].name);
+      foreach (Collider c in colliders)
+      {
+        if (colliders[0].gameObject.tag != "Collectable")
+        {
+          touchingPlatform = colliders[0].gameObject;
+          Debug.Log("<b>Colliding with: </b>" + colliders[0].name);
+
+          return;
+        }
+      }
     }
     else if (touchingPlatform != null)
     {
