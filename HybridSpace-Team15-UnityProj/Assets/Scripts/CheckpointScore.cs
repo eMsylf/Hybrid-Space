@@ -213,15 +213,8 @@ public class CheckpointScore : MonoBehaviour
 		Button retryButton = uiElements.retryButton.GetComponent<Button>();
 		Button continueButton = uiElements.continueButton.GetComponent<Button>();
 
-		if (retryButton.onClick == null)
-		{
-			retryButton.onClick.AddListener(RetryLevel);
-
-		}
-		if (continueButton.onClick == null)
-		{
-			continueButton.onClick.AddListener(ContinueNextLevel);
-		}
+		retryButton.onClick.AddListener(RetryLevel);
+		continueButton.onClick.AddListener(ContinueNextLevel);
 	}
 
 }
