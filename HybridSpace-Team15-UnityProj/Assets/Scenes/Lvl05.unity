@@ -427,11 +427,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4550201470624546, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -20.52
+      value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 4550201470624546, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.41
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4550201470624546, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -461,6 +461,11 @@ Prefab:
         type: 2}
       propertyPath: finishText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 212682815554828126, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7,
+        type: 2}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22fac2e46ebe7d74ea31fe41b4a2bfb7, type: 2}
@@ -934,6 +939,26 @@ Prefab:
       propertyPath: m_Name
       value: ResetButtonText
       objectReference: {fileID: 0}
+    - target: {fileID: 114309777615214068, guid: c56c5fe802036471aac3650c439f2059,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartSimulation
+      objectReference: {fileID: 0}
+    - target: {fileID: 114309777615214068, guid: c56c5fe802036471aac3650c439f2059,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 932192400}
+    - target: {fileID: 114328603018969228, guid: c56c5fe802036471aac3650c439f2059,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 932192400}
+    - target: {fileID: 114328603018969228, guid: c56c5fe802036471aac3650c439f2059,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetSimulation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56c5fe802036471aac3650c439f2059, type: 2}
   m_IsPrefabAsset: 0
@@ -1249,7 +1274,7 @@ MonoBehaviour:
   fixedPlatformRotation: 0
   normalPlatform: {fileID: 1001008860794306, guid: ee86492facb8a40a485d43f47e7662f3,
     type: 2}
-  jumpPlatform: {fileID: 1308826061563094, guid: b83c8c526669b49bc82abc0352a5e893,
+  jumpPlatform: {fileID: 1308826061563094, guid: d3f34a75b452ce1429fb279770160c20,
     type: 2}
   checkpointTransforms:
   - {fileID: 1979287081}
@@ -1543,50 +1568,6 @@ Prefab:
     - target: {fileID: 1871102702749998, guid: 070f6944d373fd34e9d8161e718cc292, type: 2}
       propertyPath: m_Name
       value: ARCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011605301319118, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212830166352075430, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212759623708162320, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212217454677460972, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212168988932753216, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212757910259471002, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114728288602778906, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.92941177
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539355168919890, guid: 070f6944d373fd34e9d8161e718cc292, type: 2}
-      propertyPath: m_Name
-      value: Art wrapper canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 114221849870826466, guid: 070f6944d373fd34e9d8161e718cc292,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 070f6944d373fd34e9d8161e718cc292, type: 2}
