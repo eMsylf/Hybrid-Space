@@ -298,6 +298,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResetSimulation
       objectReference: {fileID: 0}
+    - target: {fileID: 1162934410921268, guid: c56c5fe802036471aac3650c439f2059, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56c5fe802036471aac3650c439f2059, type: 2}
   m_IsPrefabAsset: 0
