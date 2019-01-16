@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 222286738272167698}
   - component: {fileID: 114443387871433896}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 222573171100118732}
   - component: {fileID: 114008254497650946}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 222701054062672690}
   - component: {fileID: 114135565068893372}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_Go
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: cbfcaf8d7e7755b4ea64542577329c9d, type: 3}
     m_FontSize: 49
     m_FontStyle: 0
     m_BestFit: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: cbfcaf8d7e7755b4ea64542577329c9d, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
