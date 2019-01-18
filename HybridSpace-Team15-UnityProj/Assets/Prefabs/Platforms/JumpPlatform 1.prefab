@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212478118407098152}
   - component: {fileID: 65880464316972600}
   - component: {fileID: 114070756666994472}
+  - component: {fileID: 114435733287188694}
   m_Layer: 0
   m_Name: JumpPlatform 1
   m_TagString: Platform
@@ -66,6 +67,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upStrength: 1500
+--- !u!114 &114435733287188694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308826061563094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashSpeed: 0
+  flashTime: 0
+  maxWhiteness: 0
 --- !u!212 &212478118407098152
 SpriteRenderer:
   m_ObjectHideFlags: 1
