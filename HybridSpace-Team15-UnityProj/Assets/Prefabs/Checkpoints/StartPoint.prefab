@@ -36,9 +36,10 @@ GameObject:
   - component: {fileID: 4395709326712780}
   - component: {fileID: 212987142318866830}
   - component: {fileID: 65855181707868782}
+  - component: {fileID: 114754119187513566}
   m_Layer: 0
   m_Name: Grassy float
-  m_TagString: Untagged
+  m_TagString: Blockade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +58,7 @@ GameObject:
   - component: {fileID: 114000801767065666}
   - component: {fileID: 114531011852472038}
   - component: {fileID: 65801419649390532}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MaleBoarIdle
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678490441503364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.72, y: 5.59, z: 19}
+  m_LocalPosition: {x: 5.72, y: 2.61, z: 19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4270837565148250}
@@ -173,9 +174,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a422a1e9397d94c488d846a85753fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3500
+  speed: 2500
   jumpSpeed: 800
   gravitySpeed: 4000
+  collisionSpherePosition: {x: 0.24, y: -0.65, z: 0}
+  collisionSphereRadius: 0.75
+  collisionLayerMask:
+    serializedVersion: 2
+    m_Bits: 823
 --- !u!114 &114531011852472038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +194,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: -7
+--- !u!114 &114754119187513566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725658588976140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d22a17b3787b49cf94e7a28ceae2cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212676743757810446
 SpriteRenderer:
   m_ObjectHideFlags: 1

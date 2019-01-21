@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Target
   - Blockade
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Level
   - UserPlatform
-  - 
-  - 
+  - Player
+  - CheckpointTrigger
   - 
   - 
   - 
@@ -43,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 766967219
+    locked: 0
+  - name: Mid-Background
+    uniqueID: 1045267179
+    locked: 0
+  - name: Midground
+    uniqueID: 1096911301
+    locked: 0
+  - name: Foreground
+    uniqueID: 350929925
+    locked: 0
+  - name: UI
+    uniqueID: 2576403439
     locked: 0

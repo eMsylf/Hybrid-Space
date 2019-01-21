@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3766e0f98a814c9e8ecc0053b214f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientClip: {fileID: 8300000, guid: f58960672e7184359b57213dcab0aaab, type: 3}
-  melodicClip: {fileID: 8300000, guid: 4231696c9171c4a1e98590ad9b76b698, type: 3}
+  ambientClip: {fileID: 8300000, guid: 34b11189510e71d4485911bd4539f8d2, type: 3}
+  melodicClip: {fileID: 8300000, guid: 34b11189510e71d4485911bd4539f8d2, type: 3}
   musicType: 1

@@ -8,6 +8,7 @@ public class FinishTrigger : MonoBehaviour
     collider.transform.GetComponent<PlayerMovementSimulated>().EnableMovement(false);
     collider.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-    SceneTransition.Instance.GoToNextLevel();
+    CheckpointScore.instance.OnLevelFinish();
+
   }
 }

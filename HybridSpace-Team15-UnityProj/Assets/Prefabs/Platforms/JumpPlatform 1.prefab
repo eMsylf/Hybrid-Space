@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 212478118407098152}
   - component: {fileID: 65880464316972600}
   - component: {fileID: 114070756666994472}
+  - component: {fileID: 114435733287188694}
   m_Layer: 0
-  m_Name: JumpPlatform
+  m_Name: JumpPlatform 1
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308826061563094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40}
-  m_LocalScale: {x: 0.127, y: 0.12700006, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 19}
+  m_LocalScale: {x: 0.2633853, y: 0.26338544, z: 2.0739}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,7 +53,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 9, z: 2}
+  m_Size: {x: 4.85, y: 7.37, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114070756666994472
 MonoBehaviour:
@@ -66,6 +67,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upStrength: 1500
+--- !u!114 &114435733287188694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308826061563094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d068e91b6ffa4fb4aab9337efdebdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashSpeed: 0
+  flashTime: 0
+  maxWhiteness: 0
 --- !u!212 &212478118407098152
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -101,7 +116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d546046d329b4eb3a7a9afb22e446ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7d08c3e8043b5346913c81386e3e18c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
